@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     before_action :authenticate, only: [:me, :update]
-
+# Auth is working
     def index
         @users = User.all
         render json: @users
