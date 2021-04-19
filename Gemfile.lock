@@ -94,6 +94,7 @@ GEM
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     jsonapi-renderer (0.2.2)
+    jwt (2.2.2)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -181,6 +182,7 @@ DEPENDENCIES
   byebug
   dotenv-rails
   faraday
+  jwt (~> 2.2)
   listen (~> 3.3)
   nokogiri
   pg (~> 1.1)
