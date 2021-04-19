@@ -5,32 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< HEAD
-# Hello World
-orlando = Destination.create(name: 'Orlando, Florida', us: true, airport_code:'ORL')
-maui = Destination.create(name: 'Maui, Hawaii', us: true, airport_code:'OGG')
-honolulu = Destination.create(name: 'Honolulu, Hawaii', us: true, airport_code:'HNL')
-seattle = Destination.create(name: 'Seattle, Washington', us: true, airport_code:'SEA')
-anchorage = Destination.create(name: 'Anchorage, Alaska', us: true, airport_code:'ANC')
-vegas = Destination.create(name: 'Las Vegas, Nevada', us: true, airport_code:'LAS')
-kauai = Destination.create(name: 'Kauai, Hawaii', us: true, airport_code:'LIH')
-bigisland = Destination.create(name: 'Big Island, Hawaii', us: true, airport_code:'KOA')
-boston = Destination.create(name: 'Boston, Massachusettes', us: true, airport_code:'BOS')
-miami = Destination.create(name: 'Miami, Florida', us: true, airport_code:'MIA')
-cancun = Destination.create(name: 'Cancun, Mexico', us: false, airport_code:'CUN')
-sanjose = Destination.create(name: 'San Jose Del Cabo, Mexico', us: false, airport_code:'SJD')
-aruba = Destination.create(name: 'Aruba, Aruba', us: false, airport_code:'AUA')
-sanjuan = Destination.create(name: 'San Juan, Puerto Rico', us: false, airport_code:'SJU')
-amalie = Destination.create(name: 'Charlotte Amalie, U.S. Virgin Islands', us: true, airport_code:'STT')
-montego = Destination.create(name: 'Montego Bay, Jamaica', us: false, airport_code:'MBJ')
-provindenciales = Destination.create(name: 'Providenciales, Turks and Caico', us: false, airport_code:'PLS')
-puntacana = Destination.create(name: 'Punta Cana, Dominican Republic', us: false, airport_code:'PUJ')
-vallarta = Destination.create(name: 'Puerto Vallarta, Mexico', us: false, airport_code:'PVR')
-nassau = Destination.create(name: 'Nassau, Bahamas', us: false, airport_code:'NAS')
-=======
+
 Destination.all.destroy_all
 Destination.all.reset_pk_sequence
-
 
 orlando = Destination.create(name: 'Orlando, Florida', image: 'https://i1.wp.com/movingtips.wpengine.com/wp-content/uploads/2019/03/orlando-florida.jpg?fit=1024%2C684&ssl=1', description: "Orlando doesn't appear poised to be unseated as the leading domestic summer vacation destination anytime soon. Once again number one in the U.S., the Theme Park Capital of the World is only building on its allure as it prepares to welcome a plethora of new attractions this year.", us: true, airport_code:'ORL')
 maui = Destination.create(name: 'Maui, Hawaii', image: 'https://cdn.travelpulse.com/images/99999999-9999-9999-9999-999999999999/4991dcd1-a7a6-5330-06dc-35f9214fee5b/630x355.jpg', description: "Despite Honolulu's ascent, Maui is the state's most sought-after destination for summer 2021. Laidback and quintessential Hawaii, the island boasts the scenic Hana Highway and some of the most beautiful beaches in the nation.", us: true, airport_code:'OGG')
@@ -52,7 +29,6 @@ provindenciales = Destination.create(name: 'Providenciales, Turks and Caico', im
 puntacana = Destination.create(name: 'Punta Cana, Dominican Republic', image: 'https://cdn.travelpulse.com/images/99999999-9999-9999-9999-999999999999/3bdd1608-0f08-c075-a48b-5b504ef6fe3f/630x355.jpg', description: "Punta Cana and the Dominican Republic are among the few places Americans can travel internationally without proof of a negative COVID-19 test result, which has certainly increased the appeal. The seaside tourist haven is up one spot from last year.", us: false, airport_code:'PUJ')
 vallarta = Destination.create(name: 'Puerto Vallarta, Mexico', image: 'https://cdn.travelpulse.com/images/99999999-9999-9999-9999-999999999999/1015b190-ef87-010b-3f9b-14088fbeec02/630x355.jpg', description: "One of three Mexican destinations in the top 10 this year, Puerto Vallarta is down one spot from 2020 to ninth this year. Nonetheless, the beloved destination south of the border continues to offer visitors new discoveries and old favorites even post-pandemic. ", us: false, airport_code:'PVR')
 nassau = Destination.create(name: 'Nassau, Bahamas', image: 'https://cdn.travelpulse.com/images/99999999-9999-9999-9999-999999999999/935c5a3b-defb-7b48-7622-f14c7ee14533/630x355.jpg', description: "The Caribbean continues to be one of the most accessible regions for Americans in the time of coronavirus and therefore it's no surprise that it's the most popular for summer travel in 2021. Nonetheless, Nassau, a destination no doubt hurt by the pause in cruising, continues to slide, falling to 10th internationally in 2021 after ranking sixth in 2020 and as high as fourth in 2019. ", us: false, airport_code:'NAS')
->>>>>>> main
 
 puts "🏝🛬🌞SEEDED✨🌎🏖"
 
