@@ -41,10 +41,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'typhoeus'
+# gem 'typhoeus'
 gem 'faraday'
 gem 'dotenv-rails', :groups => [:development, :test]
-gem 'nokogiri'
+# gem 'nokogiri'
 
 gem "active_model_serializers", "~> 0.10.12"
 

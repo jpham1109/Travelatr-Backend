@@ -81,8 +81,6 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.10.0)
-    ethon (0.13.0)
-      ffi (>= 1.15.0)
     faraday (1.3.0)
       faraday-net_http (~> 1.0)
       multipart-post (>= 1.2, < 3)
@@ -160,8 +158,6 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     thor (1.1.0)
-    typhoeus (1.4.0)
-      ethon (>= 0.9.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     websocket-driver (0.7.3)
@@ -184,12 +180,10 @@ DEPENDENCIES
   faraday
   jwt (~> 2.2)
   listen (~> 3.3)
-  nokogiri
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
   rails (~> 6.1.3, >= 6.1.3.1)
-  typhoeus
   tzinfo-data
 
 RUBY VERSION
