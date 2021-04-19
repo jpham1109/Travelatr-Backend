@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Destination.all.destroy_all
 Destination.all.reset_pk_sequence
-
 
 orlando = Destination.create(name: 'Orlando, Florida', image: 'https://i1.wp.com/movingtips.wpengine.com/wp-content/uploads/2019/03/orlando-florida.jpg?fit=1024%2C684&ssl=1', description: "Orlando doesn't appear poised to be unseated as the leading domestic summer vacation destination anytime soon. Once again number one in the U.S., the Theme Park Capital of the World is only building on its allure as it prepares to welcome a plethora of new attractions this year.", us: true, airport_code:'ORL')
 maui = Destination.create(name: 'Maui, Hawaii', image: 'https://cdn.travelpulse.com/images/99999999-9999-9999-9999-999999999999/4991dcd1-a7a6-5330-06dc-35f9214fee5b/630x355.jpg', description: "Despite Honolulu's ascent, Maui is the state's most sought-after destination for summer 2021. Laidback and quintessential Hawaii, the island boasts the scenic Hana Highway and some of the most beautiful beaches in the nation.", us: true, airport_code:'OGG')
