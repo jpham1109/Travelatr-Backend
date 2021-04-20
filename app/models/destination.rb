@@ -40,7 +40,7 @@ class Destination < ApplicationRecord
         response = Faraday.get gm_detail_url
         res = JSON.parse(response.body)
         if !res["result"]["reviews"] 
-            "No reviews"
+            return 0
         else
             res["result"]["reviews"]
         end
@@ -51,7 +51,7 @@ class Destination < ApplicationRecord
         response = Faraday.get gm_detail_url
         res = JSON.parse(response.body)
         if  !res["result"]["rating"]
-            "No rating"
+            return 0
         else
             res["result"]["rating"]
         end
@@ -62,7 +62,7 @@ class Destination < ApplicationRecord
         response = Faraday.get gm_detail_url
         res = JSON.parse(response.body)
         if !res["result"]["user_ratings_total"]
-            "No rating"
+            return 0
         else
             res["result"]["user_ratings_total"]
         end
