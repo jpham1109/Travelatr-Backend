@@ -40,7 +40,7 @@ class Destination < ApplicationRecord
         response = Faraday.get gm_detail_url
         res = JSON.parse(response.body)
         if !res["result"]["reviews"] 
-            return 0
+            return nil
         else
             res["result"]["reviews"]
         end
