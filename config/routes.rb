@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   resources :likes
   resources :favorites
   resources :destinations
-  resources :users
-  # post "/login", to: "users#login"
-  # resources :users
+  
+  post "/likes", to: "likes#create"
+
   get "/users", to: "users#index"
   post "/login", to: "users#login"
   post "/signup", to: "users#signup"

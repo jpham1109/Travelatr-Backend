@@ -6,6 +6,11 @@ class Destination < ApplicationRecord
     has_many :favorites
     has_many :users, through: :favorites
     has_many :likes
+    after_initialize :init
+
+    def init 
+       likes = 0 if likes.nil? 
+    end
 
     def city_name
         name.split(',')[0]
@@ -31,7 +36,10 @@ class Destination < ApplicationRecord
             gm_photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=#{ref}&key=#{ENV['GM_KEY']}"
             response = Faraday.get gm_photo_url
             response.headers["location"]
+<<<<<<< HEAD
             # response.headers["location"]
+=======
+>>>>>>> ec00b872d5fa8ef449bf6df789238a4de9f62066
         end
     end 
 
