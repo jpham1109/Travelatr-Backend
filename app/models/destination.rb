@@ -30,8 +30,8 @@ class Destination < ApplicationRecord
         photoref_array.map do |ref|
             gm_photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=#{ref}&key=#{ENV['GM_KEY']}"
             response = Faraday.get gm_photo_url
-            # puts response
-            response.headers["location"]
+            response
+            # response.headers["location"]
         end
     end 
 
@@ -39,33 +39,21 @@ class Destination < ApplicationRecord
         gm_detail_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=#{self.place_id}&fields=reviews,rating,user_ratings_total&key=#{ENV['GM_KEY']}"
         response = Faraday.get gm_detail_url
         res = JSON.parse(response.body)
-        if !res["result"]["reviews"] 
-            return nil
-        else
-            res["result"]["reviews"]
-        end
+        res["result"]["reviews"]
     end 
 
     def rating 
         gm_detail_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=#{self.place_id}&fields=reviews,rating,user_ratings_total&key=#{ENV['GM_KEY']}"
         response = Faraday.get gm_detail_url
         res = JSON.parse(response.body)
-        if  !res["result"]["rating"]
-            return 0
-        else
-            res["result"]["rating"]
-        end
+        res["result"]["rating"]
     end
 
     def user_ratings_total 
         gm_detail_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=#{self.place_id}&fields=reviews,rating,user_ratings_total&key=#{ENV['GM_KEY']}"
         response = Faraday.get gm_detail_url
         res = JSON.parse(response.body)
-        if !res["result"]["user_ratings_total"]
-            return 0
-        else
-            res["result"]["user_ratings_total"]
-        end
+        res["result"]["user_ratings_total"]
     end
 
 end
