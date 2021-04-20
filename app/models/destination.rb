@@ -30,7 +30,7 @@ class Destination < ApplicationRecord
         photoref_array.map do |ref|
             gm_photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=#{ref}&key=#{ENV['GM_KEY']}"
             response = Faraday.get gm_photo_url
-            response
+            response.headers["location"]
             # response.headers["location"]
         end
     end 
