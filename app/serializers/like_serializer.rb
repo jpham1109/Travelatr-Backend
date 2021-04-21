@@ -1,5 +1,5 @@
 class LikeSerializer < ActiveModel::Serializer
-  attributes :id
-  has_one :user
+  attributes :id, :user_id
+  
   # belongs_to :destination
 end
