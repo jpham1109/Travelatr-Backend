@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-    before_action :find_destination
+    before_action :find_destination, only: [:create]
 
     def index 
         @likes = Like.order(:id)

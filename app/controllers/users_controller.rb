@@ -6,6 +6,11 @@
         render json: @users
     end
 
+    def show 
+        @user = User.find(params[:id])
+        render json: @user
+    end 
+
     #POST /login
     def login
         # Look up a user with username and password

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   resources :destinations
   
   post "/likes", to: "likes#create"
-
+  
+  get "users/:id", to: "users#show"
   get "/users", to: "users#index"
   post "/login", to: "users#login"
   post "/signup", to: "users#signup"
