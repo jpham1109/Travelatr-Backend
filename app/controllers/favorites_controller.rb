@@ -10,7 +10,13 @@ class FavoritesController < ApplicationController
         @favorite = Favorite.create(user_id: params["user_id"], destination_id: params["destination_id"]) 
         render json: @favorite
     end 
-
+    
+    def destroy
+        @favorite = Favorite.find(params[:id])
+        @favorite.destroy
+        render json: @favorite
+    end 
+    
     private
 
     def find_destination
