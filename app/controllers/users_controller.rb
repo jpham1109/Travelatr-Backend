@@ -2,7 +2,7 @@
     before_action :authenticate, only: [:me, :update]
 # Auth is working
     def index
-        @users = User.all
+        @users = User.order(:id)
         render json: @users
     end
 
@@ -43,7 +43,7 @@
     end
 
     def update
-        # user = User.first
+       
         @current_user.update(first_name: params[:first_name], last_name: params[:last_name], location: params[:location], username: params[:username], password: params[:password])
         render json: @current_user
     end

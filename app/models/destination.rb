@@ -6,11 +6,7 @@ class Destination < ApplicationRecord
     has_many :favorites
     has_many :users, through: :favorites
     has_many :likes
-    after_initialize :init
-
-    def init 
-       likes = 0 if likes.nil? 
-    end
+    
 
     def city_name
         name.split(',')[0]
