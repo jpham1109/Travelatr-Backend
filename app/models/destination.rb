@@ -21,7 +21,6 @@ class Destination < ApplicationRecord
         response = Faraday.get gm_place_search_url
         res = JSON.parse(response.body)
         res["candidates"][0]["place_id"]
-        
     end
 
     def photoref_array
