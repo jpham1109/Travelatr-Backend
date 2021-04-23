@@ -3,9 +3,9 @@ require 'net/http'
 
 
 class Destination < ApplicationRecord
-    has_many :favorites
+    has_many :favorites, dependent: :destroy
     has_many :users, through: :favorites
-    has_many :likes
+    has_many :likes, dependent: :destroy
     
 
     def city_name
