@@ -1,5 +1,6 @@
 require 'json'
-require 'net/http'
+require 'nokogiri'
+require 'open-uri'
 
 
 class Destination < ApplicationRecord
@@ -7,6 +8,11 @@ class Destination < ApplicationRecord
     has_many :users, through: :favorites
     has_many :likes, dependent: :destroy
     
+    # def self.scrape
+    #     doc = Nokogiri::HTML(open('https://www.travelpulse.com/gallery/destinations/2021s-top-us-and-international-summer-travel-destinations.html'))
+    #     byebug
+    # end 
+
 
     def city_name
         name.split(',')[0]
