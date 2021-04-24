@@ -24,3 +24,4 @@ class FavoritesController < ApplicationController
         @destination = Destination.find(params["destination_id"])
     end
 end
+
