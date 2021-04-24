@@ -8,6 +8,7 @@ class FavoritesController < ApplicationController
 
     def create 
         @favorite = Favorite.create(user_id: params["user_id"], destination_id: params["destination_id"]) 
+        logger.debug "New favorite: #{@favorite.attributes.inspect}"
         render json: @favorite
     end 
     
