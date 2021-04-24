@@ -4,9 +4,9 @@ require 'open-uri'
 
 
 class Destination < ApplicationRecord
-    has_many :favorites
+    has_many :favorites, dependent: :destroy
     has_many :users, through: :favorites
-    has_many :likes
+    has_many :likes, dependent: :destroy
     
     # def self.scrape
     #     doc = Nokogiri::HTML(open('https://www.travelpulse.com/gallery/destinations/2021s-top-us-and-international-summer-travel-destinations.html'))
@@ -23,7 +23,6 @@ class Destination < ApplicationRecord
         response = Faraday.get gm_place_search_url
         res = JSON.parse(response.body)
         res["candidates"][0]["place_id"]
-        
     end
 
     def photoref_array
