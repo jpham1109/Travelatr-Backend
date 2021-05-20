@@ -1,6 +1,5 @@
  class UsersController < ApplicationController
     before_action :authenticate, only: [:me, :update]
-# Auth is working
     def index
         @users = User.order(:id)
         render json: @users
